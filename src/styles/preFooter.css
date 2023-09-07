@@ -1,0 +1,32 @@
+.pre-footer {
+  padding-block: 60px;
+  background: var(--secondary-background-color);
+  background-image: url("../images/bg-boost-desktop.svg");
+  background-size: cover;
+}
+.pre-footer-container {
+  text-align: center;
+}
+.pre-footer-container h1 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.pre-footer-container button {
+  padding: 15px 50px;
+  color: white;
+  background: var(--buttons-color);
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: var(--bold-text);
+  cursor: pointer;
+}
+.pre-footer button:hover {
+  opacity: 0.7;
+}
+@media (max-width: 576px) {
+  .pre-footer-container h1 {
+    font-size: 30px;
+  }
+}

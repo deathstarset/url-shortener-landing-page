@@ -1,0 +1,102 @@
+.header {
+  padding-block: 20px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+.header-container .navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 50px;
+}
+.header-container .navigation ul li a {
+  color: var(--text-color);
+  font-weight: var(--bold-text);
+}
+.header-container .navigation ul li a:hover {
+  color: var(--footer-color);
+}
+.header-container .navigation .buttons button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: var(--bold-text);
+  cursor: pointer;
+}
+.header-container .navigation .buttons button:first-child {
+  background: none;
+  color: var(--text-color);
+}
+.header-container .navigation .buttons button:first-child:hover {
+  color: var(--footer-color);
+}
+.header-container .navigation .buttons button:nth-child(2) {
+  color: white;
+  background: var(--buttons-color);
+}
+.header-container .navigation .buttons button:nth-child(2):hover {
+  opacity: 0.5;
+}
+.header-container ion-icon {
+  display: none;
+  font-size: 50px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+@media (max-width: 720px) {
+  .header-container .navigation {
+    position: absolute;
+    background: var(--secondary-background-color);
+    flex-direction: column;
+    top: 10%;
+    left: 50%;
+    align-items: center;
+    transform: translateX(-50%);
+    padding: 20px;
+    width: 90%;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .header-container .navigation ul {
+    margin: 0;
+    flex-direction: column;
+    border-bottom: 1px solid var(--text-color);
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    gap: 30px;
+  }
+  .header-container .navigation ul li a {
+    color: white;
+  }
+  .header-container .navigation .buttons {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .header-container .navigation .buttons button {
+    margin: 0;
+  }
+  .header-container .navigation .buttons button:nth-child(1) {
+    color: white;
+  }
+  .header-container ion-icon {
+    display: block;
+  }
+}
+/* function class */
+.appear {
+  display: block !important;
+}

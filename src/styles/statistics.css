@@ -1,0 +1,119 @@
+.statistics {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+}
+.statistics .stats-title {
+  text-align: center;
+  width: 500px;
+}
+.statistics .stats-title h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: var(--headings-color);
+}
+.statistics .stats-title p {
+  color: var(--text-color);
+  font-weight: var(--normal-text);
+  font-size: 17px;
+}
+.statistics .stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  position: relative;
+  z-index: 4;
+}
+.statistics .stats-cards::before {
+  width: 100%;
+  content: "";
+  position: absolute;
+  height: 8px;
+  background: var(--buttons-color);
+  top: 40%;
+  left: 0;
+  z-index: -1;
+}
+.statistics .stats-cards .card {
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  height: fit-content;
+}
+.statistics .stats-cards .card:nth-child(2) {
+  margin-top: 50px;
+}
+.statistics .stats-cards .card:nth-child(3) {
+  margin-top: 100px;
+}
+.statistics .stats-cards .card .card-img {
+  background: var(--secondary-background-color);
+  width: fit-content;
+  padding: 15px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+.statistics .stats-cards .card h3 {
+  color: var(--headings-color);
+}
+.statistics .stats-cards .card p {
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: var(--normal-text);
+}
+@media (max-width: 1200px) {
+  .statistics .stats-cards::before {
+    display: none;
+  }
+  .statistics .stats-cards .card {
+    height: auto;
+  }
+  .statistics .stats-cards > .card:nth-child(2) {
+    margin-top: 0;
+  }
+  .statistics .stats-cards > .card:nth-child(3) {
+    margin-top: 0;
+  }
+}
+@media (max-width: 576px) {
+  .statistics .stats-title {
+    width: 100%;
+  }
+  .statistics .stats-cards {
+    gap: 50px;
+  }
+}
+@media (max-width: 420px) {
+  .statistics .stats-title h1 {
+    font-size: 25px;
+  }
+  .statistics .stats-title p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .statistics .stats-cards .card {
+    text-align: center;
+    align-items: center;
+  }
+  .statistics .stats-cards .card p {
+    font-size: 14px;
+  }
+  .statistics .stats-cards::before {
+    display: block;
+    height: 100%;
+    width: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0%;
+  }
+}
